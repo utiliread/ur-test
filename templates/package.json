@@ -1,0 +1,13 @@
+{
+    "scripts": {
+        "build": "tsc",
+        "test": "karma start --single-run --browsers ChromeHeadless karma.config.js",
+        "watch": "karma start --auto-watch --browsers ChromeDebugging karma.config.js",
+        "clean": "rimraf dist"
+    },
+    "devDependencies": {
+        "rimraf": "^2.6.2",
+        "typescript": "^2.6.2",
+        "ur-test": "0.0.1"
+    }
+}
