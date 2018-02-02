@@ -1,3 +1,5 @@
+const tsconfig = require('./tsconfig.json');
+
 module.exports = function (config) {
     config.set({
         frameworks: ['mocha', 'chai', 'karma-typescript'],
@@ -18,12 +20,12 @@ module.exports = function (config) {
         karmaTypescriptConfig: {
             bundlerOptions: {
                 entrypoints: /\.spec\.ts$/,
-                sourceMap: true
+                sourceMap: tsconfig.compilerOptions.sourceMap
             },
             coverageOptions: {
                 instrumentation: false
             },
-            tsconfig: './tsconfig.test.json'
+            tsconfig: './tsconfig.cjs.json'
         }
     })
 }
